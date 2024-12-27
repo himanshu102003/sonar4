@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        PATH = 'C:\\Windows\\System32>'
         PYTHON_PATH = 'C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313\\Scripts'
     }
     stages {
@@ -13,7 +14,7 @@ pipeline {
             steps {
                 // Set the PATH and install dependencies using pip
                 bat '''
-                set PATH=%PYTHON_PATH%;%PATH%
+                PATH=%PYTHON_PATH%;%PATH%
                 pip install -r requirements.txt
                 '''
             }
@@ -24,7 +25,7 @@ pipeline {
             }
             steps {
                 bat '''
-                set PATH=%PYTHON_PATH%;%PATH%
+                PATH=%PYTHON_PATH%;%PATH%
                 sonar-scanner -Dsonar.projectKey=sonartest4 ^
                               -Dsonar.sources=. ^
                               -Dsonar.host.url=http://localhost:9000 ^
