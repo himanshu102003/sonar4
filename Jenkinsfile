@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = 'C:\\Windows\\System32'
+        PATH = 'C:\\Users\\himan\\Downloads\\sonar-scanner-cli-6.2.1.4610-windows-x64\\sonar-scanner-6.2.1.4610-windows-x64\\bin;C:\\Windows\\System32'
         PYTHON_PATH = 'C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313\\Scripts'
     }
     stages {
