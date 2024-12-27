@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = 'C:\\Windows\\System32>'
+        PATH = 'C:\\Windows\\System32'
         PYTHON_PATH = 'C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313;C:\\Users\\himan\\AppData\\Local\\Programs\\Python\\Python313\\Scripts'
     }
     stages {
